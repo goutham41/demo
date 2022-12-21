@@ -21,6 +21,9 @@ app.use(
   }),
 );
 app.use("/", urlShortner);
+app.use("/start", (req, res) => {
+  res.send("working");
+});
 app.listen(process.env.PORT, async () => {
   await connection;
   console.log("connected to db");
