@@ -24,8 +24,8 @@ app.use("/", urlShortner);
 app.use("/start", (req, res) => {
   res.send("working");
 });
-app.listen(process.env.PORT, async () => {
+app.listen(8080, async () => {
   await connection;
   console.log("connected to db");
-  console.log(`Server started on ${process.env.PORT}`);
+  console.log(`Server started on 8080`);
 });
